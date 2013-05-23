@@ -207,8 +207,8 @@
             <div id="propertyAgent" class="propertyAgent">
               <span class="title">Contact<span class="plus">+</span></span>
               <span class="propertyAgentName"> ${Contact1.split(",")[0]}  </span>
-              <span class="propertyAgentEmail"> <a href='mailto:${$.trim(Contact1.split(",")[1])}' > ${Contact1.split(",")[1]}</a> </span>
-              <span class="propertyAgentContact" />
+              <span class="propertyAgentEmail"> <a href='mailto:${$.trim(Contact1.split(",")[1])}?cc=leasing@goodman.com' > ${Contact1.split(",")[1]}</a> </span>
+              <!--<span class="propertyAgentContact" />-->
             </div>
             <div id="propertyInfoAvailableOptionPanel" class="print-only">
               Visit this property listing at GoodmanBetterBusiness.com to view<br/>
@@ -539,7 +539,7 @@
           </li>
           <li>
             <p>GPO Box 4703<br/>Sydney NSW 2001<br/>Australia</p>
-            <p>leasing@goodman.com</p>
+            <p><a href="mailto:leasing@goodman.com?subject=Goodman Better Business website enquiry">leasing@goodman.com</a></p>
           </li>
         </ul>
 
@@ -1270,7 +1270,7 @@
 
   <!-- Goodman Better Business application -->
 
-    <script src="js/gbb.min.js?key=20130111" type="text/javascript" ></script>
+    <script src="js/gbb.min.js?key=2013051601" type="text/javascript" ></script>
 
     <script src="js/gbb-map-styles.js" type="text/javascript" ></script>
     <script src="js/http.js" type="text/javascript" ></script>
