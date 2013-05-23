@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.goodman.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.goodman.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Web services to query properties</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.goodman.com/">
+      <s:element name="GetBBXtras">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="countrycode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBBXtrasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBBXtrasResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetActiveProperties">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="countrycode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetActivePropertiesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetActivePropertiesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetBBXtrasSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBBXtras" />
+  </wsdl:message>
+  <wsdl:message name="GetBBXtrasSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBBXtrasResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetActivePropertiesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetActiveProperties" />
+  </wsdl:message>
+  <wsdl:message name="GetActivePropertiesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetActivePropertiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBBXtrasHttpGetIn">
+    <wsdl:part name="countrycode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBBXtrasHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetActivePropertiesHttpGetIn">
+    <wsdl:part name="countrycode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetActivePropertiesHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBBXtrasHttpPostIn">
+    <wsdl:part name="countrycode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBBXtrasHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetActivePropertiesHttpPostIn">
+    <wsdl:part name="countrycode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetActivePropertiesHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="IntegrationServicesSoap">
+    <wsdl:operation name="GetBBXtras">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Gets the BBXtras matching a country code</wsdl:documentation>
+      <wsdl:input message="tns:GetBBXtrasSoapIn" />
+      <wsdl:output message="tns:GetBBXtrasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveProperties">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Gets the properties matching country code</wsdl:documentation>
+      <wsdl:input message="tns:GetActivePropertiesSoapIn" />
+      <wsdl:output message="tns:GetActivePropertiesSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IntegrationServicesHttpGet">
+    <wsdl:operation name="GetBBXtras">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Gets the BBXtras matching a country code</wsdl:documentation>
+      <wsdl:input message="tns:GetBBXtrasHttpGetIn" />
+      <wsdl:output message="tns:GetBBXtrasHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveProperties">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Gets the properties matching country code</wsdl:documentation>
+      <wsdl:input message="tns:GetActivePropertiesHttpGetIn" />
+      <wsdl:output message="tns:GetActivePropertiesHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IntegrationServicesHttpPost">
+    <wsdl:operation name="GetBBXtras">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Gets the BBXtras matching a country code</wsdl:documentation>
+      <wsdl:input message="tns:GetBBXtrasHttpPostIn" />
+      <wsdl:output message="tns:GetBBXtrasHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveProperties">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Gets the properties matching country code</wsdl:documentation>
+      <wsdl:input message="tns:GetActivePropertiesHttpPostIn" />
+      <wsdl:output message="tns:GetActivePropertiesHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="IntegrationServicesSoap" type="tns:IntegrationServicesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetBBXtras">
+      <soap:operation soapAction="http://www.goodman.com/GetBBXtras" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveProperties">
+      <soap:operation soapAction="http://www.goodman.com/GetActiveProperties" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="IntegrationServicesSoap12" type="tns:IntegrationServicesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetBBXtras">
+      <soap12:operation soapAction="http://www.goodman.com/GetBBXtras" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveProperties">
+      <soap12:operation soapAction="http://www.goodman.com/GetActiveProperties" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="IntegrationServicesHttpGet" type="tns:IntegrationServicesHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetBBXtras">
+      <http:operation location="/GetBBXtras" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveProperties">
+      <http:operation location="/GetActiveProperties" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="IntegrationServicesHttpPost" type="tns:IntegrationServicesHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetBBXtras">
+      <http:operation location="/GetBBXtras" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveProperties">
+      <http:operation location="/GetActiveProperties" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IntegrationServices">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Web services to query properties</wsdl:documentation>
+    <wsdl:port name="IntegrationServicesSoap" binding="tns:IntegrationServicesSoap">
+      <soap:address location="http://www.goodman.com/services/integrationservices.asmx" />
+    </wsdl:port>
+    <wsdl:port name="IntegrationServicesSoap12" binding="tns:IntegrationServicesSoap12">
+      <soap12:address location="http://www.goodman.com/services/integrationservices.asmx" />
+    </wsdl:port>
+    <wsdl:port name="IntegrationServicesHttpGet" binding="tns:IntegrationServicesHttpGet">
+      <http:address location="http://www.goodman.com/services/integrationservices.asmx" />
+    </wsdl:port>
+    <wsdl:port name="IntegrationServicesHttpPost" binding="tns:IntegrationServicesHttpPost">
+      <http:address location="http://www.goodman.com/services/integrationservices.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

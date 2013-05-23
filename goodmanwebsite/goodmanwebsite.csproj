@@ -1,0 +1,356 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6FFDF46C-1DE9-4670-A387-F427C013CE3F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>goodmanwebsite</RootNamespace>
+    <AssemblyName>goodmanwebsite</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\packages\AjaxControlToolkit.4.1.60501\lib\35\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AntiXSSLibrary, Version=4.2.0.0, Culture=neutral, PublicKeyToken=d127efab8a9c114f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AjaxControlToolkit.4.1.60501\lib\35\SanitizerProviders\AntiXSSLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlSanitizationLibrary">
+      <HintPath>..\packages\AjaxControlToolkit.4.1.60501\lib\35\SanitizerProviders\HtmlSanitizationLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.6\lib\net35\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SanitizerProviders">
+      <HintPath>..\packages\AjaxControlToolkit.4.1.60501\lib\35\SanitizerProviders\SanitizerProviders.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="apple-touch-icon-114x114-precomposed.png" />
+    <Content Include="apple-touch-icon-57x57-precomposed.png" />
+    <Content Include="apple-touch-icon-72x72-precomposed.png" />
+    <Content Include="apple-touch-icon-precomposed.png" />
+    <Content Include="apple-touch-icon.png" />
+    <Content Include="comp\customFormCSS.css" />
+    <Content Include="comp\images\clickBtn.gif" />
+    <Content Include="comp\images\footer.jpg" />
+    <Content Include="comp\images\header.jpg" />
+    <Content Include="comp\images\headline.jpg" />
+    <Content Include="comp\images\mapBG.jpg" />
+    <Content Include="comp\images\spacer.gif" />
+    <Content Include="comp\index.html" />
+    <Content Include="crossdomain.xml" />
+    <Content Include="css\colorbox.css" />
+    <Content Include="css\gbb.css" />
+    <Content Include="css\ie7.css" />
+    <Content Include="css\normalize.css" />
+    <Content Include="css\print.css" />
+    <Content Include="css\styles.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="goodmanwebsite.Publish.xml" />
+    <Content Include="humans.txt" />
+    <Content Include="img\ad1.png" />
+    <Content Include="img\ad2.png" />
+    <Content Include="img\addProperty.png" />
+    <Content Include="img\ajax-loader.gif" />
+    <Content Include="img\ajax-loader2.gif" />
+    <Content Include="img\atm.png" />
+    <Content Include="img\back2.png" />
+    <Content Include="img\bar.png" />
+    <Content Include="img\closeComparison.png" />
+    <Content Include="img\closeGrey.png" />
+    <Content Include="img\closeWhite.png" />
+    <Content Include="img\contact.jpg" />
+    <Content Include="img\controls.png" />
+    <Content Include="img\darkestGreyBg.jpg" />
+    <Content Include="img\darkGreyBg.jpg" />
+    <Content Include="img\darkGreyHeaderBg.jpg" />
+    <Content Include="img\email.png" />
+    <Content Include="img\email\propComparison_footerJumpBtn.gif" />
+    <Content Include="img\email\propComparison_header.gif" />
+    <Content Include="img\email\propComparison_shortlistHeader.gif" />
+    <Content Include="img\email\propComparison_viewPropertyBtn.gif" />
+    <Content Include="img\email\prop_footerDesktop.jpg" />
+    <Content Include="img\email\singleProp_footerDesktop.jpg" />
+    <Content Include="img\email\singleProp_footerJumpBtn.gif" />
+    <Content Include="img\email\singleProp_header.gif" />
+    <Content Include="img\email\singleProp_viewFullPropertyBtn.gif" />
+    <Content Include="img\email\spacer.gif" />
+    <Content Include="img\footerMenuDivider.png" />
+    <Content Include="img\freshwater_point_apts.gif" />
+    <Content Include="img\galleryIcons.png" />
+    <Content Include="img\galleryIcons2x.png" />
+    <Content Include="img\gas_station.png" />
+    <Content Include="img\gmLogo.png" />
+    <Content Include="img\gmTagline.png" />
+    <Content Include="img\goGreen.png" />
+    <Content Include="img\goodcube.png" />
+    <Content Include="img\goodman1.png" />
+    <Content Include="img\goodman2.png" />
+    <Content Include="img\goodmanIphoneLoader.gif" />
+    <Content Include="img\goodmanLoader.gif" />
+    <Content Include="img\goodman_pointer.png" />
+    <Content Include="img\goodman_pointer_small.png" />
+    <Content Include="img\greenBg.jpg" />
+    <Content Include="img\hospital.png" />
+    <Content Include="img\iconAmenityCafe.gif" />
+    <Content Include="img\iconAmenityChildcare.gif" />
+    <Content Include="img\iconAmenityGym.gif" />
+    <Content Include="img\iconAmenityParking.gif" />
+    <Content Include="img\iphoneheader.png" />
+    <Content Include="img\iphoneheadersprite.png" />
+    <Content Include="img\iphoneIcons.png" />
+    <Content Include="img\list_item.png" />
+    <Content Include="img\loading.gif" />
+    <Content Include="img\logo-region.gif" />
+    <Content Include="img\logo-region.png" />
+    <Content Include="img\logo-subregion.gif" />
+    <Content Include="img\logo-subregion.png" />
+    <Content Include="img\logo.gif" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\mapNavIcons.png" />
+    <Content Include="img\mapNavPanBg.png" />
+    <Content Include="img\menudivider.png" />
+    <Content Include="img\mobileBackPropertyDetailsIcon.png" />
+    <Content Include="img\mobileBackPropertyDetailsIcon2x.png" />
+    <Content Include="img\mobileMenuToggleIcon.png" />
+    <Content Include="img\myProperties.png" />
+    <Content Include="img\myPropertiesIpadPortrait.png" />
+    <Content Include="img\null.png" />
+    <Content Include="img\old-ad1.png" />
+    <Content Include="img\old-ad2.png" />
+    <Content Include="img\ozicon.png" />
+    <Content Include="img\parking.png" />
+    <Content Include="img\pins\airport.png" />
+    <Content Include="img\pins\atm.png" />
+    <Content Include="img\pins\bar.png" />
+    <Content Include="img\pins\bus-stop.png" />
+    <Content Include="img\pins\cafe.png" />
+    <Content Include="img\pins\CBD.png" />
+    <Content Include="img\pins\cinema.png" />
+    <Content Include="img\pins\destination.png" />
+    <Content Include="img\pins\gym.png" />
+    <Content Include="img\pins\hospital.png" />
+    <Content Include="img\pins\parking.png" />
+    <Content Include="img\pins\parks.png" />
+    <Content Include="img\pins\petrol.png" />
+    <Content Include="img\pins\placeContainerSprite.png" />
+    <Content Include="img\pins\port.png" />
+    <Content Include="img\pins\post.png" />
+    <Content Include="img\pins\restaurant.png" />
+    <Content Include="img\pins\rta.png" />
+    <Content Include="img\pins\shopping-mall.png" />
+    <Content Include="img\pins\store.png" />
+    <Content Include="img\pins\train.png" />
+    <Content Include="img\pins\university.png" />
+    <Content Include="img\post_office.png" />
+    <Content Include="img\restaurant.png" />
+    <Content Include="img\routeArrow.png" />
+    <Content Include="img\routesIcons.png" />
+    <Content Include="img\routesIcons2x.png" />
+    <Content Include="img\route_airport.gif" />
+    <Content Include="img\route_city.gif" />
+    <Content Include="img\route_custom.gif" />
+    <Content Include="img\route_seaport.gif" />
+    <Content Include="img\sheldon.png" />
+    <Content Include="img\store.png" />
+    <Content Include="img\sydneyWest.jpg" />
+    <Content Include="img\testimonialsMenu.png" />
+    <Content Include="img\testimonialsMenuIpadPortrait.png" />
+    <Content Include="img\top_banner_print.jpg" />
+    <Content Include="img\train_station.png" />
+    <Content Include="img\university.png" />
+    <Content Include="img\welcomeSlider\slide0.jpg" />
+    <Content Include="img\welcomeSlider\slide1.jpg" />
+    <Content Include="img\welcomeSlider\slide2.jpg" />
+    <Content Include="img\welcomeSlider\slide3.jpg" />
+    <Content Include="img\welcomeSlider\slide4.jpg" />
+    <Content Include="img\welcomeSlider\slide5.jpg" />
+    <Content Include="img\welcomeSlider\slide6.jpg" />
+    <Content Include="img\welcomeSlider\slide7.jpg" />
+    <Content Include="img\welcomeSlider\slide8.jpg" />
+    <Content Include="img\welcomeSlider\slide9.jpg" />
+    <Content Include="img\welcomeSlider\welcometestimonial.jpg" />
+    <Content Include="img\welcometestimonial.jpg" />
+    <Content Include="img\whiteIconsSprite.png" />
+    <Content Include="img\whiteIconsSprite1.png" />
+    <Content Include="img\whiteIconsSprite2x.png" />
+    <Content Include="index.aspx" />
+    <Content Include="index.html" />
+    <Content Include="js\amplify.store.js" />
+    <Content Include="js\backbone-localstorage.js" />
+    <Content Include="js\backbone-min.js" />
+    <Content Include="js\backbone.amplify.js" />
+    <Content Include="js\backbone.js" />
+    <Content Include="js\backbone.queryparams.js" />
+    <Content Include="js\css3-mediaqueries.js" />
+    <Content Include="js\cycle.all.js" />
+    <Content Include="js\cycle.all.min.js" />
+    <Content Include="js\cycle.lite.js" />
+    <Content Include="js\gbb-map-styles.js" />
+    <Content Include="js\gbb.js" />
+    <Content Include="js\gbb.min.js" />
+    <Content Include="js\google_maps.js" />
+    <Content Include="js\html5shiv-printshiv.js" />
+    <Content Include="js\http.js" />
+    <Content Include="js\iscroll.js" />
+    <Content Include="js\jquery.colorbox-min.js" />
+    <Content Include="js\jquery.tmpl.js" />
+    <Content Include="js\jquery.tmpl.min.js" />
+    <Content Include="js\json2.js" />
+    <Content Include="js\libs\jquery-1.7.2.js" />
+    <Content Include="js\libs\jquery-1.7.2.min.js" />
+    <Content Include="js\libs\modernizr-2.5.3.min.js" />
+    <Content Include="js\plugins.js" />
+    <Content Include="js\script.js" />
+    <Content Include="js\underscore.js" />
+    <Content Include="js\underscore.min.js" />
+    <Content Include="js\_activeProperties.js" />
+    <Content Include="js\_BBXtras.js" />
+    <Content Include="qrhandler.htm" />
+    <Content Include="robots.txt" />
+    <Content Include="ws\ie7handler.asmx" />
+    <None Include="comp\GoodmanBetterBusiness_T&amp;Cs.pdf" />
+    <None Include="comp\images\Thumbs.db" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\bluearc\integrationservices.disco" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="ws\email.asmx" />
+    <None Include="Web References\bluearc\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\bluearc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="ws\email.asmx.cs">
+      <DependentUpon>email.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ws\ie7handler.asmx.cs">
+      <DependentUpon>ie7handler.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README" />
+    <None Include="readme.md" />
+    <None Include="traffic-cam.json" />
+    <None Include="Web References\bluearc\integrationservices.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://www.goodman.com/services/integrationservices.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\bluearc\</RelPath>
+      <UpdateFromURL>http://www.goodman.com/services/integrationservices.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>goodmanwebsite_bluearc_IntegrationServices</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>41057</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

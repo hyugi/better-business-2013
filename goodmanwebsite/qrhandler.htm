@@ -1,0 +1,57 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+<!--
+http://au.goodman.com/betterbusiness/qrhandler.htm?qr=ec&region=Sydney%20North
+http://au.goodman.com/betterbusiness/qrhandler.htm?qr=ec&region=Sydney%20South
+http://au.goodman.com/betterbusiness/qrhandler.htm?qr=ec&region=Sydney%20North
+http://au.goodman.com/betterbusiness/qrhandler.htm?qr=cc
+http://au.goodman.com/betterbusiness/qrhandler.htm?qr=rav
+http://au.goodman.com/betterbusiness/qrhandler.htm?qr=sb&region=Sydney%20South
+http://au.goodman.com/betterbusiness/qrhandler.htm?qr=sb&region=Sydney%20West
+http://au.goodman.com/betterbusiness/qrhandler.htm?qr=sb&region=Sydney%20North
+http://au.goodman.com/betterbusiness/qrhandler.htm?qr=sb&city=Brisbane
+http://au.goodman.com/betterbusiness/qrhandler.htm?qr=sb&city=Melbourne
+http://au.goodman.com/betterbusiness/qrhandler.htm?qr=sb&city=Adelaide
+http://au.goodman.com/betterbusiness/qrhandler.htm?qr=sb&displayname=moorebank-business-park
+-->
+
+  <script>
+
+      function getParameterByName(name) {
+          name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+          var regexS = "[\\?&]" + name + "=([^&#]*)";
+          var regex = new RegExp(regexS);
+          var results = regex.exec(window.location.search);
+          if (results == null)
+              return "";
+          else
+              return decodeURIComponent(results[1].replace(/\+/g, " "));
+      }
+
+      var city = getParameterByName("city");
+      var region = getParameterByName("region");
+      var subregion = getParameterByName("subregion");
+      var displayname = getParameterByName("displayname");
+      var qr = getParameterByName("qr");
+
+      var redirect = "http://au.goodman.com/betterbusiness/index.aspx#";
+      //var redirect = "http://localhost:43801/index.aspx#";
+
+      if (city!=""){redirect += "city="+city;}
+      if (region!=""){redirect += "region="+region;}
+      if (subregion != "") { redirect += "subregion=" + subregion; }
+      if (displayname != "") { redirect += "displayname=" + displayname; }
+      if (qr != "") { redirect += "?qr=" + qr; }
+
+      window.location = redirect;
+
+
+  </script>
+</head>
+<body>
+</body>
+</html>

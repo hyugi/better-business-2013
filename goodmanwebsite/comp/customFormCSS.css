@@ -1,0 +1,64 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#header.info {
+margin: 0;
+padding: 0;
+border-bottom: 1px solid #656565;
+}
+* {
+font-family: Arial, Verdana, sans-serif;
+}
+form span.req {
+	color: white !important;	
+}
+#fo2li3.notranslate, #fo2li1.notranslate {
+	padding: 0px 1%;
+}
+form li.section h3{
+	height:1px;
+	padding: 0px 1%;
+		
+}
+.wufoo .section h3 {	
+	border-top: 1px solid #656565;
+}
+
+form li {
+	padding: 5px 1% 0px 1%;	
+}
+.wufoo .info h2 {
+	font-size: 135%;	
+}
+input.checkbox, input.radio {
+	margin: 0px;	
+}
+form li.buttons {
+	padding: 0px 1%;	
+}
+
+label.desc, legend.desc{
+	padding: 3px 0 0 0;
+}
+
+#errorLi {
+	display:none;	
+}
+#reqTxt {
+	font-family: Arial, Verdana, sans-serif;
+	color: white;
+	font-size:95%;	
+}
+.notranslate     error  focused {
+	background-color: #77AD1C;	
+}
+form li.error {
+	background-color: #77AD1C !important;	
+}
+form li.error .desc {
+	color: white !important;	
+}
+
+form p.error {
+	color: white !important;	
+}
